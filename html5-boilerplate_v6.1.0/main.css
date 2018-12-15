@@ -97,6 +97,16 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* Index */
+img#portfolio {
+  width: 30%;
+  margin: 80px 35% 30px;
+}
+
+div {
+  float: right;
+}
+
 /* Structural Section */
 html {
   background-color: rgb(220, 220, 220);
@@ -212,5 +222,5 @@ header nav ul li a:hover {
 footer {
   background-color: rgb(139, 134, 134);
   color: white;
-  text-align: center
+  text-align: center;
 }
