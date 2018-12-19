@@ -98,17 +98,23 @@ textarea {
    Author's custom styles
    ========================================================================== */
 /* Index */
+img#portfolio {
+  margin-top: 50px;
+}
+
+/* The h2 text is centered and has some space on top  */
 aside h2 {
   text-align: center;
   margin-top: 50px;
 }
 
+/* Moves the aside element to the right */
 aside {
-
   float: right;
 }
 
 /* icons */
+/* Centers all icons. Each icon is given a color to better associate it with what it represents. */
 i {
   vertical-align: center;
 }
@@ -140,7 +146,7 @@ body {
   background: radial-gradient(gray 40%, white);
 }
 
-
+/* h1's are given a font family and color, and are much larger. */
 body h1 {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: rgb(78, 78, 78);
@@ -159,6 +165,7 @@ header img {
 }
 
 /* Section Element */
+/* Sets structure of the section element. Defines width, background color, text color, the border and it's radius, and the font family */
 section {
   background-color: rgb(0, 0, 0);
   width: 80%;
@@ -170,12 +177,14 @@ section {
   line-height: 1.7em;
 }
 
+/* Sets strucutre for paragraph tags */
 p {
   margin-right: 10px;
   margin-left: 10px;
   font-size: 1em;
 }
 
+/* First letter of paragraph tags are larger and a different size, with a different font. Paragraph tags that are dates are not effected. */
 p::first-letter {
   font-size: 2em;
   font-family: 'Inconsolata', monospace;
@@ -184,8 +193,6 @@ p::first-letter {
 p.date::first-letter {
   font-size: 1.2em;
 }
-
-
 
 li>p {
   margin-left: 0px;
@@ -206,6 +213,8 @@ section h1 {
 }
 
 /* Navigations */
+
+
 
 nav {
   background-color: rgb(139, 134, 134);
@@ -241,4 +250,47 @@ footer {
   background-color: rgb(139, 134, 134);
   color: white;
   text-align: center;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+
+  /* The body takes up the whole space of the html background so its not shown */
+  body {
+    width: 100%;
+  }
+
+  /* h1 elements are given a line height so its not clustered */
+  h1 {
+    line-height: 1.5em;
+    color: rgb(0, 0, 0)
+  }
+
+  section h1 {
+    color: black;
+  }
+
+  /* Removes most of the progress, ex border. Makes it much more fitting for the mobile version */
+  section {
+    width: 100%;
+    background: white;
+    border: none;
+    color: black;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  /* Increases image to stretch from both sides */
+  img#portfolio {
+    width: 100%;
+  }
+
+  /* Makes the aside take presedence over the footer */
+  aside {
+    order: 99;
+  }
+
+  footer {
+    order: 100;
+  }
 }
